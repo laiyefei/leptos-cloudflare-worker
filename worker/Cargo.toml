@@ -1,5 +1,5 @@
 [package]
-name = "worker"
+name = "worker-help"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,6 +7,7 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-worker = "0.0.21"
+worker = "0.7.4"
 app = { path = "../app", features = ["ssr"] }
 leptos = { version = "0.6", features = ["ssr", "nightly"] }
+leptos_router = { version = "0.6", features = ["nightly"] }

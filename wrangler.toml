@@ -1,9 +1,16 @@
 name = "leptos-worker-app"
-main = "worker/src/lib.rs"
+main = "worker/build/worker/shim.mjs"
 compatibility_date = "2024-01-01"
 
 [build]
 command = "worker-build --release"
+cwd = "worker"
 
-[site]
-bucket = "./frontend/dist"
+# [site]
+# bucket = "./frontend/dist"
+
+[assets]
+# 根据你的截图，你的 worker 目录下有一个 build 文件夹
+# 我们假设你的 JS 和 WASM 文件就在那里
+directory = "./worker/static_pkg"
+binding = "ASSETS"
