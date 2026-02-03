@@ -43,7 +43,7 @@ pub async fn main(req: Request, _env: Env, _ctx: Context) -> Result<Response> {
                     run();
                 </script>
             </head>
-            <body>{}</body>
+            <body><div id="app">{}</div></body>
         </html>"#,
         content
     );
