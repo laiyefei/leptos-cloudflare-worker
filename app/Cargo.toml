@@ -4,23 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-# 这里不要直接开启 nightly，通过 feature 传递更稳妥
 leptos = { version = "0.6" }
+leptos_meta = { version = "0.6" }
 leptos_router = { version = "0.6" }
 
 [features]
-# 激活客户端水合所需的特性
-hydrate = [
-    "leptos/hydrate", 
-    "leptos/nightly"
-]
-
-# 激活服务端渲染所需的特性
-ssr = [
-    "leptos/ssr", 
-    "leptos_router/ssr", 
-    "leptos/nightly"
-]
-
-# 如果你想在开发时默认开启 nightly 语法
-nightly = ["leptos/nightly", "leptos_router/nightly"]
+default = [] 
+hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]
+ssr = ["leptos/ssr", "leptos_meta/ssr", "leptos_router/ssr"]

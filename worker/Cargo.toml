@@ -9,5 +9,5 @@ crate-type = ["cdylib"]
 [dependencies]
 worker = "0.7.4"
 app = { path = "../app", features = ["ssr"] }
-leptos = { version = "0.6", features = ["ssr", "nightly"] }
-leptos_router = { version = "0.6", features = ["nightly"] }
+leptos = { version = "0.6.15", features = ["ssr"] }
+leptos_router = { version = "0.6.15"}
