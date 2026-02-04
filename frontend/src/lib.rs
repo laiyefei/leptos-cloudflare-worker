@@ -22,6 +22,8 @@ pub fn hydrate() {
         .get_element_by_id("app")
         .expect("找不到 id 为 app 的 div 标签，请检查 HTML 模板");
 
+    log::info!("水合尝试");
+    log::info!("{}",path);
     // 4. 使用 mount_to，它在 hydrate 特性开启时会自动进行水合
     leptos::mount_to(el.unchecked_into(), move || view! { <App path=path.clone() /> });
 }

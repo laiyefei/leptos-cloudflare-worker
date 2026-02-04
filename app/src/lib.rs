@@ -7,7 +7,7 @@ pub fn App(#[prop(optional)] path: String) -> impl IntoView {
     // 而是让父级（Worker 或 Frontend）来决定是否包裹 Router
     view! {
         <main style="font-family: sans-serif; text-align: center; padding: 2rem;">
-            <h1>"Leptos x Cloudflare"</h1>
+            <h1>"Leptos x Clo123123udflare"</h1>
             <HomePage />
         </main>
     }
